@@ -16,8 +16,6 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "custom-config")
 
-;(load "exwm-cfg")
-
 (use-package exwm
   :config (use-package exwm-cfg))
 (exwm-init)
@@ -43,13 +41,6 @@
   (setq eshell-highlight-prompt nil
         eshell-prompt-function 'epe-theme-lambda))
 
-
-;(load "eshell-config")
-
-;(load "exwm-outer-gaps/exwm-outer-gaps")
-
-;(ignore-errors (exwm-outer-gaps-mode +1))
-
 (require 'setup-editing)
 
 (global-company-mode)
@@ -72,14 +63,6 @@
                         (face-attribute 'default :background nil t)))
             (pdf-view-midnight-minor-mode)))
 
-
-;; (add-hook 'pdf-view-mode-hook 'display-line-numbers-mode)
-
-;; (load "redtick")
-;; (load "asm-config.el")
-;; (load "slime-config.el")
-;; (load "matrix-client")
-
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 (put 'downcase-region 'disabled nil)
@@ -93,15 +76,8 @@
 ;; (setq acl2-skip-shell t)
 ;; (load "emacs-acl2.el")
 
-;(require 'cl)
-;(push "~/jukebox/lisp" load-path)
-;(autoload 'jukebox "jukebox" nil t)
-
 (global-unset-key (kbd "M-RET"))
 (global-set-key (kbd "M-RET") 'comment-or-uncomment-region)
+(define-key global-map (kbd "s-t") telega-prefix-map)
 
 (server-start)
-
-
-;; (start-process-shell-command "nyxt" nil
-;;                              "nyxt \"https://github.com/gojakuch/dynamic-rule-cellular-automata\"")

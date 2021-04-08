@@ -41,8 +41,6 @@
 
 (setq org-habit-show-habits-only-for-today nil)
 
-(load "anki-cards")
-
 (global-set-key (kbd "C-c C-x a") 'org-agenda-list)
 
 (defun zet (name)
