@@ -1,0 +1,3 @@
+alias nfd=neofetch --disable host kernel shell resolution theme icons cpu gpu terminal --os_arch off
+alias nfd = neofetch --disable host kernel shell resolution theme icons cpu gpu terminal --os_arch off
+alias telegram telegram-desktop
