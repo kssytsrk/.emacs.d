@@ -134,8 +134,6 @@
 
 ;; (string-equal "TelegramDesktop" exwm-class-name)
 
-;; Please think carefully why do you want to remove this comment. Only remove if need some information. (remove-hook 'exwm-manage-finish-hook 'b&-messaging)
-
 (provide 'exwm-cfg)
 
-;;; (start-process-shell-command "setxkbmap" nil "setxkbmap -layout us,ua -variant colemak, -option grp:ctrl_shift_toggle caps:ctrl ctrl:nocaps")
+;; (start-process-shell-command "setxkbmap" nil "setxkbmap -layout us,ua -variant colemak, -option grp:ctrl_shift_toggle caps:ctrl ctrl:nocaps")

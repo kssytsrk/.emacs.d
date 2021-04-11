@@ -17,8 +17,9 @@
  '(helm-completion-style 'emacs)
  '(inhibit-startup-screen nil)
  '(initial-buffer-choice nil)
+ '(make-backup-files nil)
  '(org-agenda-files
-   '("~/org/gtd/inbox.org" "~/org/gtd/gtd.org" "~/org/gtd/habits.org" "~/org/gtd/reading.org" "~/org/gtd/smalltasks.org" "~/org/week/") t)
+   '("~/org/gtd/inbox.org" "~/org/gtd/gtd.org" "~/org/gtd/habits.org" "~/org/gtd/reading.org" "~/org/gtd/smalltasks.org" "~/org/week/"))
  '(org-agenda-skip-additional-timestamps-same-entry t)
  '(org-capture-templates
    '(("t" "Todo [inbox]" entry
@@ -32,65 +33,66 @@
       (file "~/org/playlistplan.org")
       "" :prepend t)) t)
  '(org-habit-following-days 1)
- '(org-habit-graph-column 75 t)
+ '(org-habit-graph-column 75)
  '(org-habit-show-done-always-green t)
- '(org-habit-show-habits-only-for-today t t)
+ '(org-habit-show-habits-only-for-today t)
  '(org-modules
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus org-habit ol-info ol-irc ol-mhe ol-rmail ol-w3m))
  '(package-selected-packages
-   '(all-the-icons alert telega brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi djvu rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
+   '(org-journal emojify all-the-icons alert telega brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi djvu rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
  '(rich-minority-mode t)
  '(safe-local-variable-values
    '((eval cl-flet
-	   ((enhance-imenu-lisp
-	     (&rest keywords)
-	     (dolist
-		 (keyword keywords)
-	       (add-to-list 'lisp-imenu-generic-expression
-			    (list
-			     (purecopy
-			      (concat
-			       (capitalize keyword)
-			       (if
-				   (string=
-				    (substring-no-properties keyword -1)
-				    "s")
-				   "es" "s")))
-			     (purecopy
-			      (concat "^\\s-*("
-				      (regexp-opt
-				       (list
-					(concat "define-" keyword))
-				       t)
-				      "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
-			     2)))))
-	   (enhance-imenu-lisp "bookmarklet-command" "class" "command" "ffi-method" "function" "mode" "parenscript" "user-class"))
+           ((enhance-imenu-lisp
+             (&rest keywords)
+             (dolist
+                 (keyword keywords)
+               (add-to-list 'lisp-imenu-generic-expression
+                            (list
+                             (purecopy
+                              (concat
+                               (capitalize keyword)
+                               (if
+                                   (string=
+                                    (substring-no-properties keyword -1)
+                                    "s")
+                                   "es" "s")))
+                             (purecopy
+                              (concat "^\\s-*("
+                                      (regexp-opt
+                                       (list
+                                        (concat "define-" keyword))
+                                       t)
+                                      "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
+                             2)))))
+           (enhance-imenu-lisp "bookmarklet-command" "class" "command" "ffi-method" "function" "mode" "parenscript" "user-class"))
      (eval cl-flet
-	   ((enhance-imenu-lisp
-	     (&rest keywords)
-	     (dolist
-		 (keyword keywords)
-	       (add-to-list 'lisp-imenu-generic-expression
-			    (list
-			     (purecopy
-			      (concat
-			       (capitalize keyword)
-			       (if
-				   (string=
-				    (substring-no-properties keyword -1)
-				    "s")
-				   "es" "s")))
-			     (purecopy
-			      (concat "^\\s-*("
-				      (regexp-opt
-				       (list
-					(concat "define-" keyword))
-				       t)
-				      "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
-			     2)))))
-	   (enhance-imenu-lisp "bookmarklet-command" "class" "command" "function" "mode" "parenscript" "user-class"))))
+           ((enhance-imenu-lisp
+             (&rest keywords)
+             (dolist
+                 (keyword keywords)
+               (add-to-list 'lisp-imenu-generic-expression
+                            (list
+                             (purecopy
+                              (concat
+                               (capitalize keyword)
+                               (if
+                                   (string=
+                                    (substring-no-properties keyword -1)
+                                    "s")
+                                   "es" "s")))
+                             (purecopy
+                              (concat "^\\s-*("
+                                      (regexp-opt
+                                       (list
+                                        (concat "define-" keyword))
+                                       t)
+                                      "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
+                             2)))))
+           (enhance-imenu-lisp "bookmarklet-command" "class" "command" "function" "mode" "parenscript" "user-class"))))
  '(smtpmail-smtp-server "mail.cock.li")
- '(smtpmail-smtp-service 25))
+ '(smtpmail-smtp-service 25)
+ '(window-divider-default-places t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

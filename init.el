@@ -80,4 +80,6 @@
 (global-set-key (kbd "M-RET") 'comment-or-uncomment-region)
 (define-key global-map (kbd "s-t") telega-prefix-map)
 
+(emojify-set-emoji-styles 'unicode)
+
 (server-start)

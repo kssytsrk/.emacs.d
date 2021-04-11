@@ -60,3 +60,14 @@
   (org-treescope-cyclestates-priority '(nil ("A" "B" "C") ("D")))
   :bind
   (("C-c M-t" . org-treescope)))
+
+(use-package org-journal
+  :ensure t
+  :defer t
+  :init
+  (setq org-journal-prefix-key "C-c j ")
+  :custom
+  (org-journal-dir "~/org/diary/")
+  (org-journal-find-file 'find-file)
+  (org-journal-file-type 'weekly)
+  (org-journal-encrypt-journal t))
