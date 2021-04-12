@@ -94,3 +94,5 @@
 ;(add-to-list 'dashboard-items '(todo-week) t)
 
 ;; (org-agenda-list)
+
+(window-divider-mode 1)
