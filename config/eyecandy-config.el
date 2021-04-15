@@ -90,9 +90,5 @@
 (add-to-list 'dashboard-item-generators  '(year-percentage . dashboard-insert-year-percentage))
 (add-to-list 'dashboard-items '(year-percentage) t)
 
-;(add-to-list 'dashboard-item-generators  '(todo-week . dashboard-insert-todo-week))
-;(add-to-list 'dashboard-items '(todo-week) t)
-
-;; (org-agenda-list)
-
 (window-divider-mode 1)
+(display-time)

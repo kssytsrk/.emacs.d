@@ -39,7 +39,7 @@
  '(org-modules
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus org-habit ol-info ol-irc ol-mhe ol-rmail ol-w3m))
  '(package-selected-packages
-   '(org-journal emojify all-the-icons alert telega brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi djvu rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
+   '(emms quelpa org-journal emojify all-the-icons alert telega brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
  '(rich-minority-mode t)
  '(safe-local-variable-values
    '((eval cl-flet
@@ -92,7 +92,9 @@
            (enhance-imenu-lisp "bookmarklet-command" "class" "command" "function" "mode" "parenscript" "user-class"))))
  '(smtpmail-smtp-server "mail.cock.li")
  '(smtpmail-smtp-service 25)
- '(window-divider-default-places t))
+ '(window-divider-default-bottom-width 7)
+ '(window-divider-default-places t)
+ '(window-divider-default-right-width 7))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
