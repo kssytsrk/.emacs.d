@@ -82,11 +82,11 @@
 
 (emojify-set-emoji-styles 'unicode)
 
-;; (require 'djvu)
-
 (require 'emms-setup)
 (emms-all)
 (emms-default-players)
 (setq emms-source-file-default-directory "~/usr/msc/")
+
+(ednc-mode)
 
 (server-start)
