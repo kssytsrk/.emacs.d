@@ -30,9 +30,13 @@
 
 (load "paredit-config")
 
+(load "emms-config")
+
 (load "minor-editing-enhancements-config")
 
 (load "sly-config")
+
+(load "ednc-config")
 
 (use-package aweshell
   :load-path "~/.emacs.d/mypkgs/aweshell")
@@ -40,10 +44,6 @@
   (autoload 'epe-theme-lambda "eshell-prompt-extras")
   (setq eshell-highlight-prompt nil
         eshell-prompt-function 'epe-theme-lambda))
-
-(require 'setup-editing)
-
-(global-company-mode)
 
 (use-package pinentry
   :pin melpa
@@ -81,12 +81,5 @@
 (define-key global-map (kbd "s-t") telega-prefix-map)
 
 (emojify-set-emoji-styles 'unicode)
-
-(require 'emms-setup)
-(emms-all)
-(emms-default-players)
-(setq emms-source-file-default-directory "~/usr/msc/")
-
-(ednc-mode)
 
 (server-start)

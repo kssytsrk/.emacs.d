@@ -49,3 +49,7 @@
 (defalias 'lf 'load-file)
 
 (require 'vlf-setup)
+
+(require 'setup-editing)
+
+(global-company-mode)
