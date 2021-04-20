@@ -30,10 +30,7 @@
           ;; 's-&': Launch application.
           ([?\s-&] . (lambda (command)
                        (interactive (list (read-shell-command "$ ")))
-                       (if (not (or (equal command "telegram-desktop ")
-                                    (equal command "telegram-desktop")))
-                           (and (start-process-shell-command command nil command))
-                           (message "nope"))))
+                       (start-process-shell-command command nil command)))
           ([?\s-n] . (lambda ()
                        (interactive)
                        (start-process-shell-command
