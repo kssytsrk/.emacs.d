@@ -38,6 +38,8 @@
 
 (load "ednc-config")
 
+(load "telega-config")
+
 (use-package aweshell
   :load-path "~/.emacs.d/mypkgs/aweshell")
 (with-eval-after-load "esh-opt"
@@ -81,5 +83,9 @@
 (define-key global-map (kbd "s-t") telega-prefix-map)
 
 (emojify-set-emoji-styles 'unicode)
+
+(setq w3m-command "/home/kassy/.config/w3m.sh")
+(setq w3m-command-arguments
+      '())
 
 (server-start)

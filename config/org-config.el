@@ -12,9 +12,11 @@
 (setq org-capture-templates '(("t" "Todo [inbox]" entry
                                (file+headline "~/usr/org/gtd/inbox.org" "Tasks")
                                "* TODO %i%?")
-                              ("T" "Tickler" entry
-                               (file+headline "~/usr/org/gtd/tickler.org" "Tickler")
-                               "* %i%? \n %U")))
+			      ("b" "Book" entry
+			       (file "some-file.org")
+			       "* %^{TITLE}\n:PROPERTIES:\n:ADDED: %<[%Y-%02m-%02d]>\n:END:%^{AUTHOR}p\n%?" :empty-lines 1)
+			      ("l" "Book log" item (function org-books-visit-book-log)
+			       "- %U %?" :prepend t)))
 
 (global-set-key (kbd "C-c C-w") 'org-refile)
 
@@ -71,3 +73,5 @@
   (org-journal-find-file 'find-file)
   (org-journal-file-type 'weekly)
   (org-journal-encrypt-journal t))
+
+(setq org-books-file "~/org/plan/reading.org")
