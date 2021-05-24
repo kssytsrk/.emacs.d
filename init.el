@@ -6,7 +6,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/config/")
 (add-to-list 'load-path "~/.emacs.d/mypkgs/")
-(add-to-list 'load-path "~/.emacs.d/mypkgs/aweshell/")
+;; (add-to-list 'load-path "~/.emacs.d/mypkgs/aweshell/")
 
 (setq warning-minimum-level :emergency)
 
@@ -16,9 +16,9 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "custom-config")
 
-(use-package exwm
-  :config (use-package exwm-cfg))
-(exwm-init)
+;; (use-package exwm
+;;   :config (use-package exwm-cfg))
+;; (exwm-init)
 
 (load "package-config")
 
@@ -36,22 +36,22 @@
 
 (load "sly-config")
 
-(load "ednc-config")
+;; (load "ednc-config")
 
 (load "telega-config")
 
-(use-package aweshell
-  :load-path "~/.emacs.d/mypkgs/aweshell")
-(with-eval-after-load "esh-opt"
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-lambda))
+;; (use-package aweshell
+;;   :load-path "~/.emacs.d/mypkgs/aweshell")
+;; (with-eval-after-load "esh-opt"
+;;   (autoload 'epe-theme-lambda "eshell-prompt-extras")
+;;   (setq eshell-highlight-prompt nil
+;;         eshell-prompt-function 'epe-theme-lambda))
 
-(use-package pinentry
-  :pin melpa
-  :config
-  (setf epa-pinentry-mode 'loopback)
-  (pinentry-start))
+;; (use-package pinentry
+;;   :pin melpa
+;;   :config
+;;   (setf epa-pinentry-mode 'loopback)
+;;   (pinentry-start))
 
 (use-package lainchan
   :load-path "~/usr/dev/elisp/lainchan")
@@ -69,9 +69,9 @@
 (setq jedi:complete-on-dot t)
 (put 'downcase-region 'disabled nil)
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
-(require 'mu4e)
-(load "mu4e-config.el")
+;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+;; (require 'mu4e)
+;; (load "mu4e-config.el")
 
 ;; (add-to-list 'load-path "/opt/acl2/emacs")
 ;; (defvar acl2-skip-shell nil)
@@ -84,8 +84,25 @@
 
 (emojify-set-emoji-styles 'unicode)
 
-(setq w3m-command "/home/kassy/.config/w3m.sh")
-(setq w3m-command-arguments
-      '())
+(add-to-list 'load-path "~/.emacs.d/mypkgs/bookmark+/")
+(require 'bookmark+)
+
+(load "eww-config")
+
+;(setq w3m-command "/home/kassy/.config/w3m.sh")
+;(setq w3m-command "/usr/bin/w3m")
+;(setq w3m-command-arguments '())
 
 (server-start)
+
+(require 'ido)
+
+(fringe-mode 1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+(global-set-key (kbd "C-x C-k") 'kill-current-buffer)
+
+(blink-cursor-mode)
+(setq visible-cursor nil)

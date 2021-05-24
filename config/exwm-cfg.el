@@ -79,10 +79,10 @@
 (defun exwm-config-misc ()
   "Other configurations."
   ;; Make more room
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)
-  (fringe-mode 1))
+  
+  
+  
+  )
 
 ;; Other configurations
 (exwm-config-misc)
@@ -111,7 +111,7 @@
 (require 'desktop-environment)
 (desktop-environment-mode)
 
-(global-set-key (kbd "C-x C-k") 'kill-current-buffer)
+
 
 ;; b& telegram
 

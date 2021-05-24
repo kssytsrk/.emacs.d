@@ -76,7 +76,7 @@
   (dashboard-setup-startup-hook)
   (setq dashboard-week-agenda nil)
   (setq dashboard-set-navigator t)
-  (setq dashboard-startup-banner "/home/kassy/usr/img/anm/ayanami_rei/1cc365f613559634b3a55a63ebe73dfdcb4d4dfb73b9a62e686d7aed5163dff6.png")
+  ; (setq dashboard-startup-banner "/home/kassy/usr/img/anm/ayanami_rei/1cc365f613559634b3a55a63ebe73dfdcb4d4dfb73b9a62e686d7aed5163dff6.png")
   (setq dashboard-center-content t)
   (setq dashboard-items '()))
 

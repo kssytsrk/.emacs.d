@@ -34,7 +34,7 @@
   (kill-line)
   (yank)
   (open-line 1)
-  (next-line 1)
+  (forward-line 1)
   (yank))
 (global-unset-key (kbd "C-d"))
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
