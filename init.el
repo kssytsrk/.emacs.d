@@ -8,7 +8,7 @@
 (add-to-list 'load-path "~/.emacs.d/mypkgs/")
 ;; (add-to-list 'load-path "~/.emacs.d/mypkgs/aweshell/")
 
-(setq warning-minimum-level :emergency)
+;; (setq warning-minimum-level :emergency)
 
 (byte-recompile-directory (expand-file-name "~/.emacs.d/config/") 0)
 (byte-recompile-directory (expand-file-name "~/.emacs.d/mypkgs/") 0)
@@ -38,7 +38,7 @@
 
 ;; (load "ednc-config")
 
-(load "telega-config")
+;; (load "telega-config")
 
 ;; (use-package aweshell
 ;;   :load-path "~/.emacs.d/mypkgs/aweshell")
@@ -80,9 +80,6 @@
 
 (global-unset-key (kbd "M-RET"))
 (global-set-key (kbd "M-RET") 'comment-or-uncomment-region)
-(define-key global-map (kbd "s-t") telega-prefix-map)
-
-(emojify-set-emoji-styles 'unicode)
 
 (add-to-list 'load-path "~/.emacs.d/mypkgs/bookmark+/")
 (require 'bookmark+)
@@ -106,3 +103,5 @@
 
 (blink-cursor-mode)
 (setq visible-cursor nil)
+
+(setq gnus-select-method '(nntp "news.gmane.io"))

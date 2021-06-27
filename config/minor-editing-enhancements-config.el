@@ -8,7 +8,7 @@
 (add-hook 'text-mode-hook (lambda () (interactive) (column-marker-1 80)))
 (add-hook 'fundamental-mode-hook (lambda () (interactive) (column-marker-1 80)))
 
-(add-hook 'prog-mode-hook (lambda () (interactive) (define-key paredit-mode-map "\M-k" 'backward-delete-char)))
+;; (add-hook 'prog-mode-hook (lambda () (interactive) (define-key paredit-mode-map "\M-k" 'backward-delete-char)))
 (add-hook 'text-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 

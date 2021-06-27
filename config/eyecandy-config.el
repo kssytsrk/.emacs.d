@@ -15,7 +15,6 @@
 
 (setq-default left-fringe-width 1)
 
-(set-face-attribute 'default nil :background "black")
 (set-face-attribute 'fringe nil :background (face-attribute 'default :background))
 (set-face-attribute 'mode-line nil :foreground "black")
 (set-face-attribute 'mode-line nil :height 0.9)

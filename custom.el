@@ -13,7 +13,10 @@
  '(dashboard-set-navigator t)
  '(dashboard-week-agenda nil)
  '(debug-on-error nil)
+ '(elfeed-feeds
+   '("https://uneasy.win/rss/telegram/channel/scp_shitpost" "https://uneasy.win/rss/telegram/channel/atellschannel" "https://uneasy.win/rss/telegram/channel/little_pieces" "https://uneasy.win/rss/telegram/channel/spermalink" "https://uneasy.win/rss/telegram/channel/my_waifu_is_alien_robot" "https://uneasy.win/rss/telegram/channel/katin_kipyatok" "https://uneasy.win/rss/telegram/channel/writingdmitry" "https://uneasy.win/rss/telegram/channel/atellsvomit" "https://uneasy.win/rss/telegram/channel/emergentorder" "https://uneasy.win/rss/telegram/channel/numstation" "https://uneasy.win/rss/telegram/channel/knpp_diablo" "https://uneasy.win/rss/telegram/channel/drainedbrains" "https://uneasy.win/rss/telegram/channel/phenomincer" "https://uneasy.win/rss/telegram/channel/doyouhavetheoldestbrowser" "https://lukesmith.xyz/rss.xml" "https://uneasy.win/rss/telegram/channel/emacs_ru_pub" "https://uneasy.win/rss/telegram/channel/osint_mindset" "https://bouncepaw.github.io/feed.xml"))
  '(helm-completion-style 'emacs)
+ '(image-use-external-converter t)
  '(inhibit-startup-screen nil)
  '(initial-buffer-choice nil)
  '(make-backup-files nil)
@@ -38,7 +41,7 @@
  '(org-modules
    '(ol-bbdb ol-bibtex ol-docview ol-eww ol-gnus org-habit ol-info ol-irc ol-mhe ol-rmail ol-w3m))
  '(package-selected-packages
-   '(egg-timer helm-hoogle typit auto-auto-indent typing impatient-mode org-books w3m haskell-mode ednc pomodoro emms quelpa org-journal emojify all-the-icons alert telega brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
+   '(jabber elfeed egg-timer helm-hoogle typit auto-auto-indent typing impatient-mode org-books w3m haskell-mode ednc pomodoro emms quelpa org-journal emojify all-the-icons alert brutalist-theme docker-cli docker comment-dwim-2 bongo dashboard page-break-lines pkg-info rainbow-identifiers visual-fill-column vlf vterm base16-theme nov ert-expectations sly-quicklisp company-jedi jedi rich-minority yasnippet zygospore pass pinentry frame-purpose mentor lastfm sly lsp-mode rainbow-delimiters sx pdf-view-restore desktop-environment helm-exwm exwm-config exwm markdown-mode multiple-cursors column-enforce-mode magit counsel hy-mode paredit pdf-tools ewal helm-gtags helm ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent company clean-aindent-mode anzu))
  '(pdf-view-resize-factor 1.1)
  '(rich-minority-mode t)
  '(safe-local-variable-values
@@ -90,8 +93,6 @@
                                       "\\s-+\\(" lisp-mode-symbol-regexp "\\)"))
                              2)))))
            (enhance-imenu-lisp "bookmarklet-command" "class" "command" "function" "mode" "parenscript" "user-class"))))
- '(smtpmail-smtp-server "mail.cock.li")
- '(smtpmail-smtp-service 25)
  '(window-divider-default-bottom-width 7)
  '(window-divider-default-places t)
  '(window-divider-default-right-width 7))
@@ -100,7 +101,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "black" :foreground "#eeeee8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "mlss" :family "Anonymous Pro"))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#000120" :foreground "#eeeee8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "mlss" :family "Anonymous Pro"))))
  '(custom-comment ((t nil)))
- '(mode-line ((t (:inherit fixed-pitch :background "#888888" :foreground "black" :height 0.9))))
+ '(mode-line ((t (:inherit fixed-pitch :background "#ffffdf" :foreground "black" :height 0.9))))
  '(mode-line-inactive ((t (:background "black" :foreground "black" :height 0.9)))))
