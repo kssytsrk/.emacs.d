@@ -1,9 +1,8 @@
 ;; exwm stuff goes here
 
-;;(require 'exwm-config)
 ;;(exwm-config-default)
+
 (require 'exwm)
-(require 'ido)
 (require 'exwm-config)
 
 ;; Set the initial workspace number.
@@ -39,6 +38,12 @@
                        (interactive)
                        (start-process-shell-command
                         "firefox" nil "firefox")))
+          ([?\s-h] . (lambda ()
+                       (interactive)
+                       (shrink-window-horizontally)))
+          ([?\s-l] . (lambda ()
+                       (interactive)
+                       (enlarge-window-horizontally)))
 	  ([?\s-v] . (lambda ()
 		       (interactive)
 		       (if (equal (with-temp-buffer
@@ -76,43 +81,29 @@
 
 (exwm-enable)
 
-(defun exwm-config-misc ()
-  "Other configurations."
-  ;; Make more room
-  
-  
-  
-  )
-
-;; Other configurations
-(exwm-config-misc)
-
 ;;; xrandr
 (require 'exwm-randr)
 (exwm-randr-enable)
-(setq exwm-randr-workspace-output-plist '(0 "eDP" 1 "HDMI-A-0" 2 "eDP" 3 "HDMI-A-0" 4 "eDP"))
-(add-hook 'exwm-randr-screen-change-hook
-          (lambda ()
-            (start-process-shell-command
-             "autorandr" nil "autorandr --change")))
-
-(start-process-shell-command "setxkbmap" nil
-                             "setxkbmap -layout us,ru -variant colemak, -option grp:ctrl_shift_toggle caps:ctrl ctrl:nocaps")
-
-(start-process-shell-command "xinput" nil
-                             "xinput disable 20")
-
-(start-process-shell-command "hsetroot" nil
-                             "hsetroot -cover /home/kassy/usr/img/1602892919300.jpg")
+(setq exwm-randr-workspace-monitor-plist '(0 "eDP" 1 "HDMI-A-0" 2 "eDP" 3 "HDMI-A-0" 4 "eDP"))
 
 ;;; When stating the client from .xinitrc, `save-buffer-kill-terminal' will ;;; force-kill Emacs before it can run through `kill-emacs-hook'.
 (global-set-key (kbd "C-x C-c") 'save-buffers-kill-emacs)
 
-(require 'desktop-environment)
-(desktop-environment-mode)
+(provide 'exwm-cfg)
 
-(global-set-key (kbd "s-h") 'enlarge-window-horizontally)
-(global-set-key (kbd "s-l") 'shrink-window-horizontally)
+;; (add-hook 'exwm-randr-screen-change-hook (lambda () (start-process-shell-command "autorandr" nil "autorandr --change")))
+
+;; (start-process-shell-command "setxkbmap" nil "setxkbmap -layout us,ru -variant colemak, -option grp:ctrl_shift_toggle caps:ctrl ctrl:nocaps")
+
+;; (start-process-shell-command "xinput" nil "xinput disable 20")
+
+;; (start-process-shell-command "hsetroot" nil "hsetroot -cover /home/kassy/usr/img/1602892919300.jpg")
+
+;; (require 'desktop-environment)
+;; (desktop-environment-mode)
+
+;; (global-set-key (kbd "s-h") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "s-l") 'shrink-window-horizontally)
 
 ;; b& telegram
 
@@ -131,7 +122,5 @@
 ;;          (<= 22 current-hour)))
 
 ;; (string-equal "TelegramDesktop" exwm-class-name)
-
-(provide 'exwm-cfg)
 
 ;; (start-process-shell-command "setxkbmap" nil "setxkbmap -layout us,ua -variant colemak, -option grp:ctrl_shift_toggle caps:ctrl ctrl:nocaps")
