@@ -5,20 +5,20 @@
   (load custom-file))
 
 (add-to-list 'load-path "~/.emacs.d/config/")
-(add-to-list 'load-path "~/.emacs.d/mypkgs/")
+;; (add-to-list 'load-path "~/.emacs.d/mypkgs/")
 ;; (add-to-list 'load-path "~/.emacs.d/mypkgs/aweshell/")
 
 ;; (setq warning-minimum-level :emergency)
 
-(byte-recompile-directory (expand-file-name "~/.emacs.d/config/") 0)
-(byte-recompile-directory (expand-file-name "~/.emacs.d/mypkgs/") 0)
+;; (byte-recompile-directory (expand-file-name "~/.emacs.d/config/") 0)
+;; (byte-recompile-directory (expand-file-name "~/.emacs.d/mypkgs/") 0)
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 (load "custom-config")
 
-;; (use-package exwm
-;;   :config (use-package exwm-cfg))
-;; (exwm-init)
+(use-package exwm
+  :config (use-package exwm-cfg))
+(exwm-init)
 
 (load "package-config")
 
@@ -30,7 +30,7 @@
 
 (load "paredit-config")
 
-(load "emms-config")
+;(load "emms-config")
 
 (load "minor-editing-enhancements-config")
 
@@ -47,11 +47,11 @@
 ;;   (setq eshell-highlight-prompt nil
 ;;         eshell-prompt-function 'epe-theme-lambda))
 
-;; (use-package pinentry
-;;   :pin melpa
-;;   :config
-;;   (setf epa-pinentry-mode 'loopback)
-;;   (pinentry-start))
+(use-package pinentry
+  :pin melpa
+  :config
+  (setf epa-pinentry-mode 'loopback)
+  (pinentry-start))
 
 (use-package lainchan
   :load-path "~/usr/dev/elisp/lainchan")
@@ -65,8 +65,8 @@
                         (face-attribute 'default :background nil t)))
             (pdf-view-midnight-minor-mode)))
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)
 (put 'downcase-region 'disabled nil)
 
 ;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
@@ -81,16 +81,16 @@
 (global-unset-key (kbd "M-RET"))
 (global-set-key (kbd "M-RET") 'comment-or-uncomment-region)
 
-(add-to-list 'load-path "~/.emacs.d/mypkgs/bookmark+/")
-(require 'bookmark+)
+;; (add-to-list 'load-path "~/.emacs.d/mypkgs/bookmark+/")
+;; (require 'bookmark+)
 
-(load "eww-config")
+;(load "eww-config")
 
 ;(setq w3m-command "/home/kassy/.config/w3m.sh")
 ;(setq w3m-command "/usr/bin/w3m")
 ;(setq w3m-command-arguments '())
 
-(server-start)
+;; (server-start)
 
 (require 'ido)
 
@@ -101,7 +101,10 @@
 
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 
-(blink-cursor-mode)
-(setq visible-cursor nil)
+;; (blink-cursor-mode)
+;; (setq visible-cursor nil)
 
-(setq gnus-select-method '(nntp "news.gmane.io"))
+;(setq gnus-select-method '(nntp "news.gmane.io"))
+
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "~/local/bin/sbcl")

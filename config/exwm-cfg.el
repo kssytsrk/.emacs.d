@@ -111,7 +111,8 @@
 (require 'desktop-environment)
 (desktop-environment-mode)
 
-
+(global-set-key (kbd "s-h") 'enlarge-window-horizontally)
+(global-set-key (kbd "s-l") 'shrink-window-horizontally)
 
 ;; b& telegram
 
