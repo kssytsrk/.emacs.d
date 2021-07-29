@@ -8,7 +8,7 @@
 ;; (add-to-list 'load-path "~/.emacs.d/mypkgs/")
 ;; (add-to-list 'load-path "~/.emacs.d/mypkgs/aweshell/")
 
-;; (setq warning-minimum-level :emergency)
+(setq warning-minimum-level :emergency)
 
 ;; (byte-recompile-directory (expand-file-name "~/.emacs.d/config/") 0)
 ;; (byte-recompile-directory (expand-file-name "~/.emacs.d/mypkgs/") 0)
